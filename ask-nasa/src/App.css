@@ -10,3 +10,8 @@ body {
 img {
   width: 600px;
 }
+
+iframe {
+  width: 800px;
+  height: 600px;
+}
