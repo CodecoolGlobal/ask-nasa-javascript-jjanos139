@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  ask-nasa:
+    build: ./ask-nasa
+    container_name: ask_nasa
+    ports:
+      - '4000:3000'
+    volumes:
+      - ./ask-nasa:/app
+      - ./app/node_modules
+    stdin_open: true
+    tty: true
