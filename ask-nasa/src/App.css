@@ -1,6 +1,7 @@
 body {
-  background-color: #5d88de;
-  color: rgb(123, 55, 6)
+  background-image: url("/public/images/background.jpg");
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 .App {
@@ -9,6 +10,8 @@ body {
 
 img {
   width: 600px;
+  border: 5px solid white;
+  border-radius: 25px;
 }
 
 iframe {
