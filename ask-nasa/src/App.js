@@ -1,14 +1,14 @@
 import './App.css';
-import React from "react"
+import React from "react";
 
 let urlbase = 'https://api.nasa.gov/planetary/apod?api_key=C85tS7kq4xLTxW1Uwe8PAYF9c6rziAiL42cOLslb&date=';
 let now = new Date();
-let basedate = now.toISOString().slice(0, 10)
+let basedate = now.toISOString().slice(0, 10);
 
 export default function App() {
   let input = document.getElementById("input");
-  const [url, setUrl] = React.useState(urlbase + basedate)
-  const [nasaData, setNasaData] = React.useState({})
+  const [url, setUrl] = React.useState(urlbase + basedate);
+  const [nasaData, setNasaData] = React.useState({});
 
   React.useEffect(function getData() {
     fetch(url)
@@ -16,7 +16,7 @@ export default function App() {
         return response.json();
       })
       .then((data) => {
-        setNasaData(data)
+        setNasaData(data);
       })
       .catch(function (error) {
         console.log(error);
@@ -24,10 +24,7 @@ export default function App() {
   }, [url])
 
   function dateChange() {
-    console.log(input.value)
-    console.log(urlbase)
-    setUrl(urlbase + input.value)
-    console.log(url)
+    setUrl(urlbase + input.value);
   }
 
   return (
